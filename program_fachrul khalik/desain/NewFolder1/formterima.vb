@@ -28,14 +28,36 @@ Public Class formterima
         txttglsurat.ForeColor = Color.Gray
         Me.AxAcroPDF1.src = ""
     End Sub
+    'Sub lihat()
+    '    'Kill("d:\dm\tes\*.*")
+
+    '    lblno.Text = "123456789012"
+    '    Dim filein, filename As String
+    '    Dim file As System.IO.FileStream        
+    '    file = System.IO.File.Create("D:\dm\dek\" & lblno.Text & ".pdf")
+    '    filename = ("D:\dm\dek\" & lblno.Text & ".pdf")
+    '    file.Close()
+
+    '    FileOpen(1, txtfile.Text, OpenMode.Binary, OpenAccess.Read, OpenShare.Default)
+    '    filein = Space(LOF(1))
+    '    FileGet(1, filein)
+    '    FileClose(1)
+
+    '    Dim key As String
+    '    key = rc4(Form1.lbluser.Text, Form1.lbluser.Text)
+    '    FileOpen(1, filename, OpenMode.Binary, OpenAccess.ReadWrite, OpenShare.Default)
+    '    FilePut(1, rc4(filein, key))
+    '    FileClose(1)
+    '    Me.AxAcroPDF1().src = filename
+    'End Sub
+
     Sub lihat()
-        Kill("d:\dm\tes\*.*")
-
-
+        'Kill("d:\dm\dek\*.*")
+        lblno.Text = "123456789012"
         Dim filein, filename As String
         Dim file As System.IO.FileStream
-        file = System.IO.File.Create("D:\dm\dek\" & lblno.Text & ".pdf")
-        filename = ("D:\dm\dek\" & lblno.Text & ".pdf")
+        file = System.IO.File.Create("D:\dm\dek" & lblno.Text & ".pdf")
+        filename = ("D:\dm\dek" & lblno.Text & ".pdf")
         file.Close()
 
         FileOpen(1, txtfile.Text, OpenMode.Binary, OpenAccess.Read, OpenShare.Default)
@@ -44,19 +66,18 @@ Public Class formterima
         FileClose(1)
 
         Dim key As String
-        key = rc4(Form1.lbluser.Text, Form1.lbluser.Text)
+        key = rc4("dethe", "dethe")
         FileOpen(1, filename, OpenMode.Binary, OpenAccess.ReadWrite, OpenShare.Default)
         FilePut(1, rc4(filein, key))
         FileClose(1)
-
-
-
+        'MsgBox("crypted")
         Me.AxAcroPDF1().src = filename
     End Sub
+
     Sub urutan()
         Dim acak As String
         acak = (Format(Now, "dd")) + (Format(Now, "MM")) + (Format(Now, "yy")) + (Format(Now, "HH")) + (Format(Now, "mm")) + (Format(Now, "ss"))
-        lblno.Text = acak
+        '  lblno.Text = acak
     End Sub
     Sub simpan()
 
@@ -167,8 +188,9 @@ Public Class formterima
 
 
     Private Sub formterima_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Call TampilData()
-        Call urutan()
+        'Call TampilData()
+        'Call urutan()
+        lihat()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

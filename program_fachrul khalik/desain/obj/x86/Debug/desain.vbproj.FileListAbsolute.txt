@@ -160,3 +160,28 @@ D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\D
 D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.Formkirim.resources
 D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.progres.resources
 D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.exe
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.xml
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.pdb
+D:\A\A\program_fachrul khalik\desain\bin\Debug\desain.exe
+D:\A\A\program_fachrul khalik\desain\bin\Debug\desain.pdb
+D:\A\A\program_fachrul khalik\desain\bin\Debug\desain.xml
+D:\A\A\program_fachrul khalik\desain\bin\Debug\CircularProgressBar.dll
+D:\A\A\program_fachrul khalik\desain\bin\Debug\FontAwesome.Sharp.dll
+D:\A\A\program_fachrul khalik\desain\bin\Debug\WinFormAnimation.dll
+D:\A\A\program_fachrul khalik\desain\bin\Debug\Interop.AcroPDFLib.dll
+D:\A\A\program_fachrul khalik\desain\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.Form1.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.login.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.Resources.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.formterima.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.formendes.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.Formuser.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.Formkirim.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.progres.resources
+D:\A\A\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+D:\A\A\program_fachrul khalik\desain\bin\Debug\desain.exe.config

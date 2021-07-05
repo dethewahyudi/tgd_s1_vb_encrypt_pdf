@@ -7,7 +7,8 @@ Public Class login
     Private Sub login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IconButton1.IconChar = IconChar.WindowClose
         BukaKoneksi()
-
+        txtuser.Text = "dethewahyudi@gmail.com"
+        txtpass.Text = "Dethe7foldaa"
     End Sub
     Private Sub btnlogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlogin.Click
         If txtuser.Text = "admin" And txtuser.Text = "admin" Then
