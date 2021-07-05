@@ -1,0 +1,162 @@
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\bin\Debug\desain.exe
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\bin\Debug\desain.pdb
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\bin\Debug\desain.xml
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\obj\x86\Debug\desain.Form1.resources
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\obj\x86\Debug\desain.Resources.resources
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\obj\x86\Debug\desain.exe
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\obj\x86\Debug\desain.xml
+c:\users\fachrul\documents\visual studio 2010\Projects\desain\desain\obj\x86\Debug\desain.pdb
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.formbaca.resources
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.formendes.resources
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.Formgantipass.resources
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.Formhelp.resources
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.Formtulis.resources
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.login.resources
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\bin\Debug\CircularProgressBar.dll
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\bin\Debug\WinFormAnimation.dll
+C:\Users\FACHRUL\Documents\Visual Studio 2010\Projects\desain\desain\obj\x86\Debug\desain.progres.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.exe
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.xml
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.pdb
+E:\skripsi ku\program\desain\desain\bin\Debug\desain.exe
+E:\skripsi ku\program\desain\desain\bin\Debug\desain.pdb
+E:\skripsi ku\program\desain\desain\bin\Debug\desain.xml
+E:\skripsi ku\program\desain\desain\bin\Debug\CircularProgressBar.dll
+E:\skripsi ku\program\desain\desain\bin\Debug\FontAwesome.Sharp.dll
+E:\skripsi ku\program\desain\desain\bin\Debug\WinFormAnimation.dll
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.Form1.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.login.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.Resources.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.formbaca.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.formendes.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.Formgantipass.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.Formhelp.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.Formtulis.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.progres.resources
+E:\skripsi ku\program\desain\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.exe
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.xml
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.pdb
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\desain.exe
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\desain.pdb
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\desain.xml
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\CircularProgressBar.dll
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\FontAwesome.Sharp.dll
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\WinFormAnimation.dll
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Form1.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.login.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Resources.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.formendes.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Formhelp.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Formtulis.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.progres.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Formuser.resources
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.forrmkirim.resources
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\Interop.AcroPDFLib.dll
+E:\skripsi ku\program\desain - Copy\desain\bin\Debug\AxInterop.AcroPDFLib.dll
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\Interop.AcroPDFLib.dll
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+E:\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.exe
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.xml
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.pdb
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\desain.exe
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\desain.pdb
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\desain.xml
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\CircularProgressBar.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\FontAwesome.Sharp.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\WinFormAnimation.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\Interop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Form1.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.login.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Resources.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.formendes.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Formuser.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Formhelp.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.progres.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.formterima.resources
+D:\fachrul\skripsi ku\program\desain - Copy\desain\obj\x86\Debug\desain.Formkirim.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.exe
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.xml
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.pdb
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\desain.exe
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\desain.pdb
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\desain.xml
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\CircularProgressBar.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\FontAwesome.Sharp.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\WinFormAnimation.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\Interop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.Form1.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.login.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.Resources.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.formterima.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.formendes.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.Formuser.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.Formkirim.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.progres.resources
+D:\fachrul\skripsi ku\program\desain - Copy - Copy\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.exe
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.xml
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.pdb
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\desain.exe
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\desain.pdb
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\desain.xml
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\CircularProgressBar.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\FontAwesome.Sharp.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\WinFormAnimation.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\Interop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.Form1.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.login.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.Resources.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.formterima.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.formendes.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.Formuser.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.Formkirim.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.progres.resources
+D:\fachrul\skripsi ku\program\desain - Copy - penerima\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.exe
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.xml
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.pdb
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\desain.exe
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\desain.pdb
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\desain.xml
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\CircularProgressBar.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\FontAwesome.Sharp.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\WinFormAnimation.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\Interop.AcroPDFLib.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.vbprojResolveAssemblyReference.cache
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.Form1.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.login.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.Resources.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.formterima.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.formendes.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.Formuser.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.Formkirim.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.progres.resources
+D:\Jurnal Skripsi\skripsi fachrul khalik\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
