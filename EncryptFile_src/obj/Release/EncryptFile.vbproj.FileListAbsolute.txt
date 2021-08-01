@@ -1,0 +1,6 @@
+D:\A\A\EncryptFile_src\bin\EncryptFile.exe
+D:\A\A\EncryptFile_src\bin\EncryptFile.xml
+D:\A\A\EncryptFile_src\obj\Release\EncryptFile.frmMain.resources
+D:\A\A\EncryptFile_src\obj\Release\EncryptFile.vbproj.GenerateResource.Cache
+D:\A\A\EncryptFile_src\obj\Release\EncryptFile.exe
+D:\A\A\EncryptFile_src\obj\Release\EncryptFile.xml
