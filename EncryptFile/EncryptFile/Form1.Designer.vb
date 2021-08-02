@@ -41,6 +41,8 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -56,12 +58,13 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(406, 230)
+        Me.TabControl1.Size = New System.Drawing.Size(736, 315)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.WebBrowser1)
         Me.TabPage1.Controls.Add(Me.btnencrypt)
         Me.TabPage1.Controls.Add(Me.txtnama)
         Me.TabPage1.Controls.Add(Me.Label3)
@@ -71,7 +74,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(398, 204)
+        Me.TabPage1.Size = New System.Drawing.Size(728, 289)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Encrypt File"
         '
@@ -168,12 +171,13 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.WebBrowser2)
         Me.TabPage2.Controls.Add(Me.btndecrypt)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(398, 204)
+        Me.TabPage2.Size = New System.Drawing.Size(728, 289)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Decrypt File"
         '
@@ -239,13 +243,31 @@ Partial Class Form1
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog1"
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(386, 17)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(334, 264)
+        Me.WebBrowser1.TabIndex = 7
+        '
+        'WebBrowser2
+        '
+        Me.WebBrowser2.Location = New System.Drawing.Point(386, 16)
+        Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser2.Name = "WebBrowser2"
+        Me.WebBrowser2.Size = New System.Drawing.Size(334, 264)
+        Me.WebBrowser2.TabIndex = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(406, 230)
+        Me.ClientSize = New System.Drawing.Size(736, 315)
         Me.Controls.Add(Me.TabControl1)
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -277,5 +299,7 @@ Partial Class Form1
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents OpenFileDialog2 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents WebBrowser2 As System.Windows.Forms.WebBrowser
 
 End Class

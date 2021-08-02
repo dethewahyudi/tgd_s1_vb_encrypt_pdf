@@ -12,7 +12,7 @@ Public Class Form1
     Dim strOutputDecrypt As String = ""
     Dim fsInput As System.IO.FileStream
     Dim fsOutput As System.IO.FileStream
-    Dim txtPassEncrypt As String = "Tgd"
+    Dim txtPassEncrypt As String = "tgd"
     Dim encrypt As String = "Encrypt"
     Dim decrypt As String = "Dencrypt"
     Dim namafile As String
@@ -69,6 +69,7 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\" & encrypt)
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\" & decrypt)
+        System.IO.Directory.CreateDirectory(Application.StartupPath & "\temp")
         btnencrypt.Enabled = False
         btndecrypt.Enabled = False
         txtFileToEncrypt.ReadOnly = True
@@ -87,11 +88,16 @@ Public Class Form1
         OpenFileDialog.Filter = "Files (*.pdf) | *.pdf"
         txtDestinationEncrypt = ""
         namafile = ""
+        WebBrowser1.Navigate("about:blank")
 
         If OpenFileDialog.ShowDialog = DialogResult.OK Then
+            For Each Dir As String In Directory.GetFiles(Application.StartupPath & "\temp")
+                Dim fileDelete As New FileInfo(Dir)
+                fileDelete.Delete()
+            Next
 
             strFileToEncrypt = OpenFileDialog.FileName
-            txtFileToEncrypt.Text = strFileToEncrypt      
+            txtFileToEncrypt.Text = strFileToEncrypt
             Dim iPosition As Integer = 0
             Dim i As Integer = 0
 
@@ -101,7 +107,10 @@ Public Class Form1
             End While
 
 
-            strOutputEncrypt = strFileToEncrypt.Substring(iPosition + 1)    
+            strOutputEncrypt = strFileToEncrypt.Substring(iPosition + 1)
+            Dim tempfile As String = Application.StartupPath & "\temp\" & strOutputEncrypt
+            My.Computer.FileSystem.CopyFile(OpenFileDialog.FileName, Application.StartupPath & "\temp\" & strOutputEncrypt)
+            WebBrowser1.Navigate(tempfile & "#toolbar=0&navpanes=0")
             Dim S As String = strFileToEncrypt.Substring(0, iPosition + 1)
             S = Application.StartupPath & "\" & encrypt
             strOutputEncrypt = strOutputEncrypt.Replace("."c, "_"c)
@@ -118,6 +127,8 @@ Public Class Form1
         OpenFileDialog.InitialDirectory = Application.StartupPath
         OpenFileDialog.Filter = "Encrypted Files (*.encrypt) | *.encrypt"
         txtDestinationDecrypt = ""
+        namafile = ""
+        WebBrowser2.Navigate("about:blank")
 
         If OpenFileDialog.ShowDialog = DialogResult.OK Then
             strFileToDecrypt = OpenFileDialog.FileName
@@ -134,7 +145,7 @@ Public Class Form1
             Dim S As String = strFileToDecrypt.Substring(0, iPosition + 1)
             S = Application.StartupPath & "\" & decrypt
             strOutputDecrypt = strOutputDecrypt.Substring((iPosition + 1))
-
+            namafile = strOutputDecrypt.Replace("_"c, "."c)
             txtDestinationDecrypt = S & "\" & strOutputDecrypt.Replace("_"c, "."c)
             btndecrypt.Enabled = True
 
@@ -191,10 +202,44 @@ Public Class Form1
             If Direction = CryptoAction.ActionDecrypt Then
                 Dim fileEncrypted As New FileInfo(strFileToDecrypt)
                 fileEncrypted.Delete()
+
+                For Each Dir As String In Directory.GetFiles(Application.StartupPath & "\temp")
+                    Dim fileDelete As New FileInfo(Dir)
+                    fileDelete.Delete()
+                Next
+
+                Dim tempfile As String = Application.StartupPath & "\temp\" & namafile
+                My.Computer.FileSystem.CopyFile(txtDestinationDecrypt, Application.StartupPath & "\temp\" & namafile)
+                WebBrowser2.Navigate(tempfile & "#toolbar=0&navpanes=0")
+
             End If
 
             Dim Wrap As String = Chr(13) + Chr(10)
             If Direction = CryptoAction.ActionEncrypt Then
+
+                Dim myemail As String = "encrypt@tgd.my.id"
+                Dim mypass As String = "CX[k!?RoIyzp"
+
+                Dim mail As New MailMessage
+                Dim server As New SmtpClient("mail.tgd.my.id")
+                mail.From = New MailAddress("" & myemail & "")
+                mail.[To].Add("" & txttujuan.Text & "")
+                mail.Subject = Me.Text & " (" & namafile & ")"
+                mail.Body = "Hai, " & txtnama.Text & vbCrLf _
+                                & "  Berikut " & Me.Text.ToLower & " (" & namafile & ")"
+
+                Dim attac As System.Net.Mail.Attachment
+                attac = New System.Net.Mail.Attachment(txtDestinationEncrypt)
+                mail.Attachments.Add(attac)
+
+                server.Port = 26
+                server.Credentials = New System.Net.NetworkCredential("" & myemail & "", "" & mypass & "")
+                server.EnableSsl = True
+                server.Send(mail)
+                server.Dispose()
+
+                txttujuan.Text = ""
+                txtnama.Text = ""
                 MsgBox("Berhasil di Encrypt dan terkirim", MsgBoxStyle.Information, "Success")
                 txtFileToEncrypt.Text = "Click Browse to load file."
             Else
@@ -229,6 +274,8 @@ Public Class Form1
     End Sub
 
     Private Sub btnencrypt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnencrypt.Click
+        WebBrowser1.Navigate("about:blank")
+        WebBrowser2.Navigate("about:blank")
 
         Dim bytKey As Byte()
         Dim bytIV As Byte()
@@ -236,29 +283,19 @@ Public Class Form1
             MsgBox("File belum di pilih !", MsgBoxStyle.Critical, "Gagal kirim")
             Exit Sub
         End If
+
+        If (txttujuan.Text = "") Then
+            MsgBox("Tujuan email belum terisi !", MsgBoxStyle.Critical, "Gagal kirim")
+            Exit Sub
+        End If
+
+        If (txtnama.Text = "") Then
+            MsgBox("Nama penerima belum terisi", MsgBoxStyle.Critical, "Gagal kirim")
+            Exit Sub
+        End If
         bytKey = CreateKey(txtPassEncrypt)
         bytIV = CreateIV(txtPassEncrypt)
         EncryptOrDecryptFile(strFileToEncrypt, txtDestinationEncrypt, bytKey, bytIV, CryptoAction.ActionEncrypt)
-
-        Dim myemail As String = "encrypt@tgd.my.id"
-        Dim mypass As String = "CX[k!?RoIyzp"
-
-        Dim mail As New MailMessage
-        Dim server As New SmtpClient("mail.tgd.my.id")
-        mail.From = New MailAddress("" & myemail & "")
-        mail.[To].Add("" & txttujuan.Text & "")
-        mail.Subject = Me.Text & " (" & namafile & ")"
-        mail.Body = "Hai, " & txtnama.Text & vbCrLf _
-                        & "  Berikut " & Me.Text.ToLower & " (" & namafile & ")"
-
-        Dim attac As System.Net.Mail.Attachment
-        attac = New System.Net.Mail.Attachment(txtDestinationEncrypt)
-        mail.Attachments.Add(attac)
-
-        server.Port = 26
-        server.Credentials = New System.Net.NetworkCredential("" & myemail & "", "" & mypass & "")
-        server.EnableSsl = True
-        server.Send(mail)
 
     End Sub
 
