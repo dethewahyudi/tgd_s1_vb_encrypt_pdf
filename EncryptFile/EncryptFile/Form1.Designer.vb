@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.btnencrypt = New System.Windows.Forms.Button()
         Me.txtnama = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,6 +35,7 @@ Partial Class Form1
         Me.txtFileToEncrypt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
         Me.btndecrypt = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.fileopen2 = New System.Windows.Forms.Button()
@@ -41,8 +43,6 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -78,6 +78,14 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Encrypt File"
         '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(386, 17)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(334, 264)
+        Me.WebBrowser1.TabIndex = 7
+        '
         'btnencrypt
         '
         Me.btnencrypt.FlatAppearance.BorderColor = System.Drawing.Color.Red
@@ -97,7 +105,6 @@ Partial Class Form1
         Me.txtnama.Name = "txtnama"
         Me.txtnama.Size = New System.Drawing.Size(253, 20)
         Me.txtnama.TabIndex = 6
-        Me.txtnama.Text = "Dethe"
         '
         'Label3
         '
@@ -115,7 +122,6 @@ Partial Class Form1
         Me.txttujuan.Name = "txttujuan"
         Me.txttujuan.Size = New System.Drawing.Size(253, 20)
         Me.txttujuan.TabIndex = 4
-        Me.txttujuan.Text = "dethewahyudi@yahoo.co.id"
         '
         'Label2
         '
@@ -181,6 +187,14 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Decrypt File"
         '
+        'WebBrowser2
+        '
+        Me.WebBrowser2.Location = New System.Drawing.Point(386, 16)
+        Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser2.Name = "WebBrowser2"
+        Me.WebBrowser2.Size = New System.Drawing.Size(334, 264)
+        Me.WebBrowser2.TabIndex = 10
+        '
         'btndecrypt
         '
         Me.btndecrypt.FlatAppearance.BorderColor = System.Drawing.Color.Red
@@ -242,22 +256,6 @@ Partial Class Form1
         'OpenFileDialog2
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog1"
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Location = New System.Drawing.Point(386, 17)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(334, 264)
-        Me.WebBrowser1.TabIndex = 7
-        '
-        'WebBrowser2
-        '
-        Me.WebBrowser2.Location = New System.Drawing.Point(386, 16)
-        Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser2.Name = "WebBrowser2"
-        Me.WebBrowser2.Size = New System.Drawing.Size(334, 264)
-        Me.WebBrowser2.TabIndex = 10
         '
         'Form1
         '
