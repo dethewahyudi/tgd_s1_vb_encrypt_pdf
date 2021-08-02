@@ -7,3 +7,12 @@ D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.v
 D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.exe
 D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.xml
 D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.pdb
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.exe
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.xml
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.pdb
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\bin\Debug\EncryptFile.exe
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\bin\Debug\EncryptFile.pdb
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\bin\Debug\EncryptFile.xml
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.Form1.resources
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.Resources.resources
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.vbproj.GenerateResource.Cache

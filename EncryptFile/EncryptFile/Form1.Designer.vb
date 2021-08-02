@@ -24,26 +24,23 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.btnencrypt = New System.Windows.Forms.Button()
+        Me.txtnama = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txttujuan = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.fileopen = New System.Windows.Forms.Button()
-        Me.txtbrowse = New System.Windows.Forms.TextBox()
+        Me.txtFileToEncrypt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btndecrypt = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.fileopen2 = New System.Windows.Forms.Button()
+        Me.txtFileToDecrypt = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -59,44 +56,45 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(408, 241)
+        Me.TabControl1.Size = New System.Drawing.Size(406, 230)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TabPage1.Controls.Add(Me.Button2)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.btnencrypt)
+        Me.TabPage1.Controls.Add(Me.txtnama)
         Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
+        Me.TabPage1.Controls.Add(Me.txttujuan)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(400, 215)
+        Me.TabPage1.Size = New System.Drawing.Size(398, 204)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Encrypt File"
         '
-        'Button2
+        'btnencrypt
         '
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Lime
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(50, 158)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(295, 33)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Encrypt File Dan Kirim"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnencrypt.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.btnencrypt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnencrypt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.btnencrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnencrypt.Location = New System.Drawing.Point(50, 158)
+        Me.btnencrypt.Name = "btnencrypt"
+        Me.btnencrypt.Size = New System.Drawing.Size(295, 33)
+        Me.btnencrypt.TabIndex = 3
+        Me.btnencrypt.Text = "Encrypt File Dan Kirim"
+        Me.btnencrypt.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txtnama
         '
-        Me.TextBox3.Location = New System.Drawing.Point(113, 116)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(253, 20)
-        Me.TextBox3.TabIndex = 6
+        Me.txtnama.Location = New System.Drawing.Point(113, 116)
+        Me.txtnama.Name = "txtnama"
+        Me.txtnama.Size = New System.Drawing.Size(253, 20)
+        Me.txtnama.TabIndex = 6
+        Me.txtnama.Text = "Dethe"
         '
         'Label3
         '
@@ -104,16 +102,17 @@ Partial Class Form1
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(17, 117)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 17)
+        Me.Label3.Size = New System.Drawing.Size(68, 17)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Initial"
+        Me.Label3.Text = "Penerima"
         '
-        'TextBox2
+        'txttujuan
         '
-        Me.TextBox2.Location = New System.Drawing.Point(113, 90)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(253, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txttujuan.Location = New System.Drawing.Point(113, 90)
+        Me.txttujuan.Name = "txttujuan"
+        Me.txttujuan.Size = New System.Drawing.Size(253, 20)
+        Me.txttujuan.TabIndex = 4
+        Me.txttujuan.Text = "dethewahyudi@yahoo.co.id"
         '
         'Label2
         '
@@ -128,7 +127,7 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.fileopen)
-        Me.GroupBox1.Controls.Add(Me.txtbrowse)
+        Me.GroupBox1.Controls.Add(Me.txtFileToEncrypt)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 17)
         Me.GroupBox1.Name = "GroupBox1"
@@ -138,7 +137,7 @@ Partial Class Form1
         '
         'fileopen
         '
-        Me.fileopen.FlatAppearance.BorderColor = System.Drawing.Color.Lime
+        Me.fileopen.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.fileopen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.fileopen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.fileopen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -149,12 +148,12 @@ Partial Class Form1
         Me.fileopen.Text = "Browse"
         Me.fileopen.UseVisualStyleBackColor = True
         '
-        'txtbrowse
+        'txtFileToEncrypt
         '
-        Me.txtbrowse.Location = New System.Drawing.Point(75, 21)
-        Me.txtbrowse.Name = "txtbrowse"
-        Me.txtbrowse.Size = New System.Drawing.Size(202, 20)
-        Me.txtbrowse.TabIndex = 1
+        Me.txtFileToEncrypt.Location = New System.Drawing.Point(75, 21)
+        Me.txtFileToEncrypt.Name = "txtFileToEncrypt"
+        Me.txtFileToEncrypt.Size = New System.Drawing.Size(202, 20)
+        Me.txtFileToEncrypt.TabIndex = 1
         '
         'Label1
         '
@@ -169,70 +168,32 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TabPage2.Controls.Add(Me.Button3)
-        Me.TabPage2.Controls.Add(Me.TextBox4)
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.btndecrypt)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(400, 215)
+        Me.TabPage2.Size = New System.Drawing.Size(398, 204)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Decrypt File"
         '
-        'Button3
+        'btndecrypt
         '
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Lime
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(50, 157)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(295, 33)
-        Me.Button3.TabIndex = 9
-        Me.Button3.Text = "Decrypt File"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(113, 115)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(253, 20)
-        Me.TextBox4.TabIndex = 12
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 116)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 17)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Initial"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(113, 89)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(253, 20)
-        Me.TextBox5.TabIndex = 10
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(17, 90)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 17)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Email Tujuan"
+        Me.btndecrypt.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.btndecrypt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btndecrypt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.btndecrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btndecrypt.Location = New System.Drawing.Point(35, 74)
+        Me.btndecrypt.Name = "btndecrypt"
+        Me.btndecrypt.Size = New System.Drawing.Size(295, 33)
+        Me.btndecrypt.TabIndex = 9
+        Me.btndecrypt.Text = "Decrypt File"
+        Me.btndecrypt.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.fileopen2)
+        Me.GroupBox2.Controls.Add(Me.txtFileToDecrypt)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 16)
         Me.GroupBox2.Name = "GroupBox2"
@@ -240,25 +201,25 @@ Partial Class Form1
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         '
-        'Button4
+        'fileopen2
         '
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Lime
-        Me.Button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(283, 18)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 25)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "Browse"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.fileopen2.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.fileopen2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.fileopen2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.fileopen2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.fileopen2.Location = New System.Drawing.Point(283, 18)
+        Me.fileopen2.Name = "fileopen2"
+        Me.fileopen2.Size = New System.Drawing.Size(75, 25)
+        Me.fileopen2.TabIndex = 2
+        Me.fileopen2.Text = "Browse"
+        Me.fileopen2.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtFileToDecrypt
         '
-        Me.TextBox6.Location = New System.Drawing.Point(75, 21)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(202, 20)
-        Me.TextBox6.TabIndex = 1
+        Me.txtFileToDecrypt.Location = New System.Drawing.Point(75, 21)
+        Me.txtFileToDecrypt.Name = "txtFileToDecrypt"
+        Me.txtFileToDecrypt.Size = New System.Drawing.Size(202, 20)
+        Me.txtFileToDecrypt.TabIndex = 1
         '
         'Label6
         '
@@ -270,15 +231,19 @@ Partial Class Form1
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Pilih File"
         '
-        'OpenFileDialog1
+        'OpenFileDialog
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog.FileName = "OpenFileDialog1"
+        '
+        'OpenFileDialog2
+        '
+        Me.OpenFileDialog2.FileName = "OpenFileDialog1"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(408, 241)
+        Me.ClientSize = New System.Drawing.Size(406, 230)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -288,7 +253,6 @@ Partial Class Form1
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -297,24 +261,21 @@ Partial Class Form1
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents fileopen As System.Windows.Forms.Button
-    Friend WithEvents txtbrowse As System.Windows.Forms.TextBox
+    Friend WithEvents txtFileToEncrypt As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents btnencrypt As System.Windows.Forms.Button
+    Friend WithEvents txtnama As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txttujuan As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents btndecrypt As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents fileopen2 As System.Windows.Forms.Button
+    Friend WithEvents txtFileToDecrypt As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents OpenFileDialog As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents OpenFileDialog2 As System.Windows.Forms.OpenFileDialog
 
 End Class

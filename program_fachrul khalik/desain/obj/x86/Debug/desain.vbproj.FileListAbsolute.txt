@@ -210,3 +210,8 @@ D:\A\A\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.
 D:\A\A\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.Formkirim.resources
 D:\A\A\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.progres.resources
 D:\A\A\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.GenerateResource.Cache
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\bin\Debug\desain.exe.config
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.vbproj.ResolveComReference.cache
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.exe
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.xml
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\program_fachrul khalik\desain\obj\x86\Debug\desain.pdb

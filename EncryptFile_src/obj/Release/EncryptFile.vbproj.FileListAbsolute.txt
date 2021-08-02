@@ -4,3 +4,10 @@ D:\A\A\EncryptFile_src\obj\Release\EncryptFile.frmMain.resources
 D:\A\A\EncryptFile_src\obj\Release\EncryptFile.vbproj.GenerateResource.Cache
 D:\A\A\EncryptFile_src\obj\Release\EncryptFile.exe
 D:\A\A\EncryptFile_src\obj\Release\EncryptFile.xml
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\bin\EncryptFile.exe.config
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\obj\Release\EncryptFile.exe
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\obj\Release\EncryptFile.xml
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\bin\EncryptFile.exe
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\bin\EncryptFile.xml
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\obj\Release\EncryptFile.frmMain.resources
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile_src\obj\Release\EncryptFile.vbproj.GenerateResource.Cache
