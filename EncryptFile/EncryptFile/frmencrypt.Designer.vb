@@ -32,15 +32,19 @@ Partial Class frmencrypt
         Me.fileopen = New System.Windows.Forms.Button()
         Me.txtFileToEncrypt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(390, 12)
+        Me.WebBrowser1.Location = New System.Drawing.Point(405, 12)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(334, 264)
+        Me.WebBrowser1.Size = New System.Drawing.Size(373, 416)
         Me.WebBrowser1.TabIndex = 14
         '
         'btnencrypt
@@ -131,12 +135,44 @@ Partial Class frmencrypt
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Pilih File"
         '
+        'OpenFileDialog
+        '
+        Me.OpenFileDialog.FileName = "OpenFileDialog1"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(87, 210)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(253, 20)
+        Me.TextBox1.TabIndex = 16
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(48, 213)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(33, 17)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Cari"
+        '
+        'ListView1
+        '
+        Me.ListView1.Location = New System.Drawing.Point(12, 236)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(372, 190)
+        Me.ListView1.TabIndex = 17
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
         'frmencrypt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(738, 295)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(838, 530)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.btnencrypt)
         Me.Controls.Add(Me.txtnama)
@@ -167,4 +203,8 @@ Partial Class frmencrypt
     Friend WithEvents fileopen As System.Windows.Forms.Button
     Friend WithEvents txtFileToEncrypt As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents OpenFileDialog As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
 End Class

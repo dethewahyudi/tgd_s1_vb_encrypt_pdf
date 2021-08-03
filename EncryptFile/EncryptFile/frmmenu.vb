@@ -64,14 +64,52 @@ Public Class frmmenu
     'End Sub
 
     Private Sub btnkirim_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnkirim.Click
+        lbljdl.Text = "Kirim Data"
         SplitContainer2.Panel2.Controls.Clear()
         Dim frm As New frmencrypt
         frm.TopLevel = False
 
         SplitContainer2.Panel2.Controls.Add(frm)
         frm.Show()
-
-        SplitContainer1.IsSplitterFixed = True
     End Sub
 
+    Private Sub btnhome_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnhome.Click
+        lbljdl.Text = "Home"
+
+        SplitContainer2.Panel2.Controls.Clear()
+        Dim frm As New frmhome
+        frm.TopLevel = False
+
+        SplitContainer2.Panel2.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    Private Sub frmmenu_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        SplitContainer1.IsSplitterFixed = True
+        SplitContainer2.IsSplitterFixed = True
+
+        lbljdl.Text = "Home"
+
+        SplitContainer2.Panel2.Controls.Clear()
+        Dim frm As New frmencrypt
+        frm.TopLevel = False
+
+        SplitContainer2.Panel2.Controls.Add(frm)
+        frm.Show()
+    End Sub
+
+    
+    Private Sub btnerima_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnerima.Click
+        SplitContainer1.IsSplitterFixed = True
+        SplitContainer2.IsSplitterFixed = True
+
+        lbljdl.Text = "Terima Data"
+
+        SplitContainer2.Panel2.Controls.Clear()
+        Dim frm As New frmdecrypt
+        frm.TopLevel = False
+
+        SplitContainer2.Panel2.Controls.Add(frm)
+        frm.Show()
+    End Sub
 End Class

@@ -21,3 +21,5 @@ D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\bin\Debug\EncryptFi
 D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmlogin.resources
 D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmmenu.resources
 D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmencrypt.resources
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmhome.resources
+D:\PROJECT_WEB\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmdecrypt.resources
