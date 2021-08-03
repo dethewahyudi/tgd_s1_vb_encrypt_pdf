@@ -27,7 +27,8 @@ Partial Class frmdecrypt
         Me.fileopen2 = New System.Windows.Forms.Button()
         Me.txtFileToDecrypt = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,13 +86,17 @@ Partial Class frmdecrypt
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Pilih File"
         '
-        'WebBrowser1
+        'WebBrowser2
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(405, 12)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(373, 416)
-        Me.WebBrowser1.TabIndex = 15
+        Me.WebBrowser2.Location = New System.Drawing.Point(405, 12)
+        Me.WebBrowser2.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser2.Name = "WebBrowser2"
+        Me.WebBrowser2.Size = New System.Drawing.Size(373, 416)
+        Me.WebBrowser2.TabIndex = 15
+        '
+        'OpenFileDialog
+        '
+        Me.OpenFileDialog.FileName = "OpenFileDialog1"
         '
         'frmdecrypt
         '
@@ -99,7 +104,7 @@ Partial Class frmdecrypt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(781, 584)
-        Me.Controls.Add(Me.WebBrowser1)
+        Me.Controls.Add(Me.WebBrowser2)
         Me.Controls.Add(Me.btndecrypt)
         Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -118,5 +123,6 @@ Partial Class frmdecrypt
     Friend WithEvents fileopen2 As System.Windows.Forms.Button
     Friend WithEvents txtFileToDecrypt As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents WebBrowser2 As System.Windows.Forms.WebBrowser
+    Friend WithEvents OpenFileDialog As System.Windows.Forms.OpenFileDialog
 End Class

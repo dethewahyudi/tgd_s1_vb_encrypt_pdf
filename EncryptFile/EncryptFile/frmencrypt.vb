@@ -66,6 +66,7 @@ Public Class frmencrypt
     End Enum
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\" & encrypt)
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\" & decrypt)
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\temp")
@@ -78,12 +79,13 @@ Public Class frmencrypt
 
         ListView1.View = View.Details
         ListView1.GridLines = True
-        ListView1.Columns.Add("No").Width = 50
-        ListView1.Columns.Add("Penerima").Width = 120
+        ListView1.Columns.Add("No").Width = 30
+        ListView1.Columns.Add("Penerima").Width = 80
         ListView1.Columns.Add("Email").Width = 200
+        ListView1.Columns.Add("Terkirim").Width = 80
         ListView1.FullRowSelect = True
 
-        ' tampil()
+        tampil()
     End Sub
 
     Private Sub fileopen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fileopen.Click
@@ -216,6 +218,7 @@ Public Class frmencrypt
 
                 txttujuan.Text = ""
                 txtnama.Text = ""
+                btnencrypt.Enabled = False
                 MsgBox("Berhasil di Encrypt dan terkirim", MsgBoxStyle.Information, "Success")
                 txtFileToEncrypt.Text = "Click Browse to load file."
             Else
@@ -273,18 +276,34 @@ Public Class frmencrypt
         bytIV = CreateIV(txtPassEncrypt)
         EncryptOrDecryptFile(strFileToEncrypt, txtDestinationEncrypt, bytKey, bytIV, CryptoAction.ActionEncrypt)
 
+        Try
+            koneksi()
+            cmd = New OleDbCommand("insert into tblkirim values ('" & txtnama.Text & "','" & txttujuan.Text & "',now())", con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            tampil()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 
     Public Sub tampil()
         Try
             koneksi()
-            cmd = New OleDbCommand("select * from tblkirim", con)
+            If (txtcari.Text = "") Then
+                cmd = New OleDbCommand("select * from tblkirim", con)
+            Else
+                cmd = New OleDbCommand("select * from tblkirim where emailpenerima like '%" & txtcari.Text & "%'", con)
+            End If
+
             rd = cmd.ExecuteReader
             Dim x = 0
             ListView1.Items.Clear()
             While rd.Read
-                ListView1.Items.Add(rd(0).ToString)
-                For i As Integer = 1 To 3 Step 1
+                ListView1.Items.Add(x + 1)
+                For i As Integer = 0 To 2 Step 1
                     ListView1.Items(x).SubItems.Add(rd(i).ToString)
                 Next
                 x += 1
@@ -298,4 +317,14 @@ Public Class frmencrypt
         End Try
     End Sub
 
+   
+    Private Sub txtcari_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcari.TextChanged
+        tampil()
+    End Sub
+
+   
+    Private Sub ListView1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.Click
+        txtnama.Text = ListView1.SelectedItems.Item(0).SubItems(1).Text
+        txttujuan.Text = ListView1.SelectedItems.Item(0).SubItems(2).Text
+    End Sub
 End Class

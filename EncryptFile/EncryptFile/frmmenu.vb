@@ -85,13 +85,14 @@ Public Class frmmenu
     End Sub
 
     Private Sub frmmenu_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        lblinitial.Text = "Initial : " & frmlogin.TextBox1.Text
         SplitContainer1.IsSplitterFixed = True
         SplitContainer2.IsSplitterFixed = True
 
         lbljdl.Text = "Home"
 
         SplitContainer2.Panel2.Controls.Clear()
-        Dim frm As New frmencrypt
+        Dim frm As New frmhome
         frm.TopLevel = False
 
         SplitContainer2.Panel2.Controls.Add(frm)
@@ -111,5 +112,9 @@ Public Class frmmenu
 
         SplitContainer2.Panel2.Controls.Add(frm)
         frm.Show()
+    End Sub
+
+    Private Sub btnkeluar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnkeluar.Click
+        Me.Close()
     End Sub
 End Class

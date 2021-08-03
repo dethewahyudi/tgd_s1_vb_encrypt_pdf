@@ -143,7 +143,7 @@ Partial Class frmmenu
         '
         'SplitContainer2.Panel1
         '
-        Me.SplitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.SplitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SplitContainer2.Panel1.Controls.Add(Me.lblinitial)
         Me.SplitContainer2.Panel1.Controls.Add(Me.lbljdl)
         '
@@ -158,10 +158,10 @@ Partial Class frmmenu
         'lblinitial
         '
         Me.lblinitial.AutoSize = True
-        Me.lblinitial.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblinitial.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblinitial.Location = New System.Drawing.Point(495, 23)
         Me.lblinitial.Name = "lblinitial"
-        Me.lblinitial.Size = New System.Drawing.Size(57, 20)
+        Me.lblinitial.Size = New System.Drawing.Size(66, 24)
         Me.lblinitial.TabIndex = 1
         Me.lblinitial.Text = "Label2"
         '
@@ -185,7 +185,7 @@ Partial Class frmmenu
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmmenu"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MENU UTAMA"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)

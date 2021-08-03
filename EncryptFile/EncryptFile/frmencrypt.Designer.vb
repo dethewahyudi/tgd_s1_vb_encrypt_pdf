@@ -33,7 +33,7 @@ Partial Class frmencrypt
         Me.txtFileToEncrypt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtcari = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.GroupBox1.SuspendLayout()
@@ -139,12 +139,12 @@ Partial Class frmencrypt
         '
         Me.OpenFileDialog.FileName = "OpenFileDialog1"
         '
-        'TextBox1
+        'txtcari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(87, 210)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(253, 20)
-        Me.TextBox1.TabIndex = 16
+        Me.txtcari.Location = New System.Drawing.Point(87, 210)
+        Me.txtcari.Name = "txtcari"
+        Me.txtcari.Size = New System.Drawing.Size(253, 20)
+        Me.txtcari.TabIndex = 16
         '
         'Label4
         '
@@ -171,7 +171,7 @@ Partial Class frmencrypt
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(838, 530)
         Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtcari)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.btnencrypt)
@@ -204,7 +204,7 @@ Partial Class frmencrypt
     Friend WithEvents txtFileToEncrypt As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtcari As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
 End Class
