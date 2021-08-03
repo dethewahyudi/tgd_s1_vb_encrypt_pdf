@@ -80,6 +80,24 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmencrypt.Designer.vb">
+      <DependentUpon>frmencrypt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmencrypt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.vb">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmenu.designer.vb">
+      <DependentUpon>frmmenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -99,6 +117,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmencrypt.resx">
+      <DependentUpon>frmencrypt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmenu.resx">
+      <DependentUpon>frmmenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
