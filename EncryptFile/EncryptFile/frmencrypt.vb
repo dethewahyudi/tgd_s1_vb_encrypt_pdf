@@ -15,6 +15,7 @@ Public Class frmencrypt
     Dim encrypt As String = "Encrypt"
     Dim decrypt As String = "Dencrypt"
     Dim namafile As String
+    Dim tempfile As String
 
     Dim txtDestinationEncrypt As String = ""
     Dim txtDestinationDecrypt As String = ""
@@ -71,6 +72,7 @@ Public Class frmencrypt
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\" & decrypt)
         System.IO.Directory.CreateDirectory(Application.StartupPath & "\temp")
         btnencrypt.Enabled = False
+        btnkirim.Enabled = False
         'btndecrypt.Enabled = False
         txtFileToEncrypt.ReadOnly = True
         txtFileToEncrypt.Text = "Click Browse to load file."
@@ -84,12 +86,14 @@ Public Class frmencrypt
         ListView1.Columns.Add("Email").Width = 200
         ListView1.Columns.Add("Terkirim").Width = 80
         ListView1.FullRowSelect = True
+        PictureBox1.Visible = False
+        Control.CheckForIllegalCrossThreadCalls = False
 
         tampil()
     End Sub
 
     Private Sub fileopen_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fileopen.Click
-
+        OpenFileDialog.Dispose()
         txtFileToEncrypt.Text = "Click Browse to load file."
         OpenFileDialog.FileName = ""
         OpenFileDialog.Title = "Choose a file to encrypt"
@@ -117,7 +121,7 @@ Public Class frmencrypt
 
 
             strOutputEncrypt = strFileToEncrypt.Substring(iPosition + 1)
-            Dim tempfile As String = Application.StartupPath & "\temp\" & strOutputEncrypt
+            tempfile = Application.StartupPath & "\temp\" & strOutputEncrypt
             My.Computer.FileSystem.CopyFile(OpenFileDialog.FileName, Application.StartupPath & "\temp\" & strOutputEncrypt)
             WebBrowser1.Navigate(tempfile & "#toolbar=0&navpanes=0")
             Dim S As String = strFileToEncrypt.Substring(0, iPosition + 1)
@@ -125,8 +129,8 @@ Public Class frmencrypt
             strOutputEncrypt = strOutputEncrypt.Replace("."c, "_"c)
             namafile = strOutputEncrypt & ".encrypt"
             txtDestinationEncrypt = S & "\" & strOutputEncrypt & ".encrypt"
-            btnencrypt.Enabled = True
-
+            btnencrypt.Enabled = True          
+            OpenFileDialog.Dispose()
         End If
     End Sub
 
@@ -194,33 +198,9 @@ Public Class frmencrypt
 
             Dim Wrap As String = Chr(13) + Chr(10)
             If Direction = CryptoAction.ActionEncrypt Then
-
-                Dim myemail As String = "encrypt@tgd.my.id"
-                Dim mypass As String = "CX[k!?RoIyzp"
-
-                Dim mail As New MailMessage
-                Dim server As New SmtpClient("mail.tgd.my.id")
-                mail.From = New MailAddress("" & myemail & "")
-                mail.[To].Add("" & txttujuan.Text & "")
-                mail.Subject = Me.Text & " (" & namafile & ")"
-                mail.Body = "Hai, " & txtnama.Text & vbCrLf _
-                                & "  Berikut " & Me.Text.ToLower & " (" & namafile & ")"
-
-                Dim attac As System.Net.Mail.Attachment
-                attac = New System.Net.Mail.Attachment(txtDestinationEncrypt)
-                mail.Attachments.Add(attac)
-
-                server.Port = 26
-                server.Credentials = New System.Net.NetworkCredential("" & myemail & "", "" & mypass & "")
-                server.EnableSsl = True
-                server.Send(mail)
-                server.Dispose()
-
-                txttujuan.Text = ""
-                txtnama.Text = ""
-                btnencrypt.Enabled = False
-                MsgBox("Berhasil di Encrypt dan terkirim", MsgBoxStyle.Information, "Success")
+                MsgBox("Berhasil di Encrypt", MsgBoxStyle.Information, "Success")
                 txtFileToEncrypt.Text = "Click Browse to load file."
+                btnkirim.Enabled = True
             Else
                 MsgBox("Berhasil di Dencrypt", MsgBoxStyle.Information, "Success")
                 'txtFileToDecrypt.Text = "Click Browse to load file."
@@ -263,29 +243,9 @@ Public Class frmencrypt
             Exit Sub
         End If
 
-        If (txttujuan.Text = "") Then
-            MsgBox("Tujuan email belum terisi !", MsgBoxStyle.Critical, "Gagal kirim")
-            Exit Sub
-        End If
-
-        If (txtnama.Text = "") Then
-            MsgBox("Nama penerima belum terisi", MsgBoxStyle.Critical, "Gagal kirim")
-            Exit Sub
-        End If
         bytKey = CreateKey(txtPassEncrypt)
         bytIV = CreateIV(txtPassEncrypt)
         EncryptOrDecryptFile(strFileToEncrypt, txtDestinationEncrypt, bytKey, bytIV, CryptoAction.ActionEncrypt)
-
-        Try
-            koneksi()
-            cmd = New OleDbCommand("insert into tblkirim values ('" & txtnama.Text & "','" & txttujuan.Text & "',now())", con)
-            cmd.ExecuteNonQuery()
-            con.Close()
-
-            tampil()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
 
     End Sub
 
@@ -295,7 +255,7 @@ Public Class frmencrypt
             If (txtcari.Text = "") Then
                 cmd = New OleDbCommand("select * from tblkirim", con)
             Else
-                cmd = New OleDbCommand("select * from tblkirim where emailpenerima like '%" & txtcari.Text & "%'", con)
+                cmd = New OleDbCommand("select * from tblkirim where emailpenerima like '%" & txtcari.Text & "%' or inisialpenerima like '%" & txtcari.Text & "%'", con)
             End If
 
             rd = cmd.ExecuteReader
@@ -326,5 +286,65 @@ Public Class frmencrypt
     Private Sub ListView1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.Click
         txtnama.Text = ListView1.SelectedItems.Item(0).SubItems(1).Text
         txttujuan.Text = ListView1.SelectedItems.Item(0).SubItems(2).Text
+    End Sub
+
+    Private Sub btnkirim_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnkirim.Click
+        BackgroundWorker1.RunWorkerAsync()
+    End Sub
+
+    Private Sub BackgroundWorker1_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        If (txttujuan.Text = "") Then
+            MsgBox("Tujuan email belum terisi !", MsgBoxStyle.Critical, "Gagal kirim")
+            Exit Sub
+        End If
+
+        If (txtnama.Text = "") Then
+            MsgBox("Nama penerima belum terisi", MsgBoxStyle.Critical, "Gagal kirim")
+            Exit Sub
+        End If
+
+        PictureBox1.Visible = True
+        btnencrypt.Enabled = False
+        btnkirim.Enabled = False     
+        btnkirim.Text = "Sedang mengirim email..!"
+
+        Dim myemail As String = "encrypt@tgd.my.id"
+        Dim mypass As String = "CX[k!?RoIyzp"
+
+        Dim mail As New MailMessage
+        Dim server As New SmtpClient("mail.tgd.my.id")
+        mail.From = New MailAddress("" & myemail & "")
+        mail.[To].Add("" & txttujuan.Text & "")
+        mail.Subject = Me.Text & " (" & namafile & ")"
+        mail.Body = "Hai, " & txtnama.Text & vbCrLf _
+                        & "  Berikut " & Me.Text.ToLower & " (" & namafile & ")"
+
+        Dim attac As System.Net.Mail.Attachment
+        attac = New System.Net.Mail.Attachment(txtDestinationEncrypt)
+        mail.Attachments.Add(attac)
+
+        server.Port = 26
+        server.Credentials = New System.Net.NetworkCredential("" & myemail & "", "" & mypass & "")
+        server.EnableSsl = True
+        server.Send(mail)
+        server.Dispose()
+
+        Try
+            koneksi()
+            cmd = New OleDbCommand("insert into tblkirim values ('" & txtnama.Text & "','" & txttujuan.Text & "',now())", con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            tampil()
+
+            txttujuan.Text = ""
+            txtnama.Text = ""
+            PictureBox1.Visible = False
+            btnkirim.Text = "Kirim"
+            MsgBox("Berhasil terkirim", MsgBoxStyle.Information, "Success")
+            txtFileToEncrypt.Text = "Click Browse to load file."
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

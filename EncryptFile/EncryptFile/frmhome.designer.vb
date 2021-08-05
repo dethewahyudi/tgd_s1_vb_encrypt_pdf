@@ -43,7 +43,7 @@ Partial Class frmhome
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(66, 24)
+        Me.Label1.Location = New System.Drawing.Point(176, 66)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 9

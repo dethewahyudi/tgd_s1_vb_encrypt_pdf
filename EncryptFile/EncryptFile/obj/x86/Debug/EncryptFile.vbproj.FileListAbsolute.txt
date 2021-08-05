@@ -28,3 +28,4 @@ D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.f
 D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmhome.resources
 D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmlogin.resources
 D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmmenu.resources
+D:\A\A\tgd_s1_vb_encrypt_pdf\EncryptFile\EncryptFile\obj\x86\Debug\EncryptFile.frmuser.resources

@@ -53,25 +53,25 @@ Public Class formterima
 
     Sub lihat()
         'Kill("d:\dm\dek\*.*")
-        lblno.Text = "123456789012"
-        Dim filein, filename As String
-        Dim file As System.IO.FileStream
-        file = System.IO.File.Create("D:\dm\dek" & lblno.Text & ".pdf")
-        filename = ("D:\dm\dek" & lblno.Text & ".pdf")
-        file.Close()
+        'lblno.Text = "123456789012"
+        'Dim filein, filename As String
+        'Dim file As System.IO.FileStream
+        'file = System.IO.File.Create("D:\dm\dek" & lblno.Text & ".pdf")
+        'filename = ("D:\dm\dek" & lblno.Text & ".pdf")
+        'file.Close()
 
-        FileOpen(1, txtfile.Text, OpenMode.Binary, OpenAccess.Read, OpenShare.Default)
-        filein = Space(LOF(1))
-        FileGet(1, filein)
-        FileClose(1)
+        'FileOpen(1, txtfile.Text, OpenMode.Binary, OpenAccess.Read, OpenShare.Default)
+        'filein = Space(LOF(1))
+        'FileGet(1, filein)
+        'FileClose(1)
 
         Dim key As String
         key = rc4("dethe", "dethe")
-        FileOpen(1, filename, OpenMode.Binary, OpenAccess.ReadWrite, OpenShare.Default)
-        FilePut(1, rc4(filein, key))
+        'FileOpen(1, filename, OpenMode.Binary, OpenAccess.ReadWrite, OpenShare.Default)
+        'FilePut(1, rc4(filein, key))
         FileClose(1)
         'MsgBox("crypted")
-        Me.AxAcroPDF1().src = filename
+        'Me.AxAcroPDF1().src = filename
     End Sub
 
     Sub urutan()

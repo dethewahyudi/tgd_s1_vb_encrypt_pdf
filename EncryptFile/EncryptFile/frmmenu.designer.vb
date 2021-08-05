@@ -26,6 +26,7 @@ Partial Class frmmenu
         Me.btnkeluar = New System.Windows.Forms.Button()
         Me.btnerima = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.btnuser = New System.Windows.Forms.Button()
         Me.btnhome = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnkirim = New System.Windows.Forms.Button()
@@ -49,7 +50,7 @@ Partial Class frmmenu
         Me.btnkeluar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange
         Me.btnkeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnkeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnkeluar.Location = New System.Drawing.Point(8, 321)
+        Me.btnkeluar.Location = New System.Drawing.Point(8, 363)
         Me.btnkeluar.Name = "btnkeluar"
         Me.btnkeluar.Size = New System.Drawing.Size(144, 35)
         Me.btnkeluar.TabIndex = 3
@@ -80,6 +81,7 @@ Partial Class frmmenu
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnuser)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnhome)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnkirim)
@@ -90,10 +92,24 @@ Partial Class frmmenu
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(944, 508)
+        Me.SplitContainer1.Size = New System.Drawing.Size(944, 613)
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.SplitterWidth = 1
         Me.SplitContainer1.TabIndex = 7
+        '
+        'btnuser
+        '
+        Me.btnuser.BackColor = System.Drawing.Color.Yellow
+        Me.btnuser.FlatAppearance.BorderSize = 0
+        Me.btnuser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange
+        Me.btnuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnuser.Location = New System.Drawing.Point(8, 321)
+        Me.btnuser.Name = "btnuser"
+        Me.btnuser.Size = New System.Drawing.Size(144, 35)
+        Me.btnuser.TabIndex = 18
+        Me.btnuser.Text = "User"
+        Me.btnuser.UseVisualStyleBackColor = False
         '
         'btnhome
         '
@@ -143,35 +159,37 @@ Partial Class frmmenu
         '
         'SplitContainer2.Panel1
         '
-        Me.SplitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SplitContainer2.Panel1.BackColor = System.Drawing.Color.DarkViolet
         Me.SplitContainer2.Panel1.Controls.Add(Me.lblinitial)
         Me.SplitContainer2.Panel1.Controls.Add(Me.lbljdl)
         '
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.SplitContainer2.Size = New System.Drawing.Size(784, 508)
-        Me.SplitContainer2.SplitterDistance = 67
+        Me.SplitContainer2.Size = New System.Drawing.Size(784, 613)
+        Me.SplitContainer2.SplitterDistance = 80
         Me.SplitContainer2.SplitterWidth = 1
         Me.SplitContainer2.TabIndex = 0
         '
         'lblinitial
         '
         Me.lblinitial.AutoSize = True
-        Me.lblinitial.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblinitial.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblinitial.ForeColor = System.Drawing.Color.White
         Me.lblinitial.Location = New System.Drawing.Point(495, 23)
         Me.lblinitial.Name = "lblinitial"
-        Me.lblinitial.Size = New System.Drawing.Size(66, 24)
+        Me.lblinitial.Size = New System.Drawing.Size(101, 31)
         Me.lblinitial.TabIndex = 1
         Me.lblinitial.Text = "Label2"
         '
         'lbljdl
         '
         Me.lbljdl.AutoSize = True
-        Me.lbljdl.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbljdl.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbljdl.ForeColor = System.Drawing.Color.White
         Me.lbljdl.Location = New System.Drawing.Point(16, 23)
         Me.lbljdl.Name = "lbljdl"
-        Me.lbljdl.Size = New System.Drawing.Size(72, 24)
+        Me.lbljdl.Size = New System.Drawing.Size(101, 31)
         Me.lbljdl.TabIndex = 0
         Me.lbljdl.Text = "Label1"
         '
@@ -180,7 +198,7 @@ Partial Class frmmenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(944, 508)
+        Me.ClientSize = New System.Drawing.Size(944, 613)
         Me.Controls.Add(Me.SplitContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -208,4 +226,5 @@ Partial Class frmmenu
     Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
     Friend WithEvents lbljdl As System.Windows.Forms.Label
     Friend WithEvents lblinitial As System.Windows.Forms.Label
+    Friend WithEvents btnuser As System.Windows.Forms.Button
 End Class

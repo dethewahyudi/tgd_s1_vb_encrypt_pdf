@@ -1,7 +1,18 @@
 ﻿Imports System.Data.OleDb
 Public Class frmlogin
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+  
+
+    Private Sub frmlogin_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Me.MaximizeBox = False
+        'Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Text = "FORM LOGIN"
+        Label1.Font = New Font("Microsoft Sans Serif", 20, FontStyle.Bold)
+        Me.MaximizeBox = False
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+    End Sub
+
+    Private Sub btnlogin_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnlogin.Click
         Try
             koneksi()
             cmd = New OleDbCommand("select * from login where username='" & TextBox1.Text & "' and password='" & TextBox2.Text & "'", con)
@@ -20,16 +31,7 @@ Public Class frmlogin
         End Try
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub btnkeluar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnkeluar.Click
         Me.Close()
-    End Sub
-
-    Private Sub frmlogin_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        'Me.MaximizeBox = False
-        'Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Text = "FORM LOGIN"
-        Label1.Font = New Font("Microsoft Sans Serif", 20, FontStyle.Bold)
-        Me.MaximizeBox = False
-        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
     End Sub
 End Class

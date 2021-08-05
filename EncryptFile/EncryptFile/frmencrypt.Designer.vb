@@ -22,6 +22,7 @@ Partial Class frmencrypt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmencrypt))
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.btnencrypt = New System.Windows.Forms.Button()
         Me.txtnama = New System.Windows.Forms.TextBox()
@@ -36,7 +37,11 @@ Partial Class frmencrypt
         Me.txtcari = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.btnkirim = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'WebBrowser1
@@ -53,11 +58,11 @@ Partial Class frmencrypt
         Me.btnencrypt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnencrypt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.btnencrypt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnencrypt.Location = New System.Drawing.Point(54, 153)
+        Me.btnencrypt.Location = New System.Drawing.Point(446, 448)
         Me.btnencrypt.Name = "btnencrypt"
         Me.btnencrypt.Size = New System.Drawing.Size(295, 33)
         Me.btnencrypt.TabIndex = 9
-        Me.btnencrypt.Text = "Encrypt File Dan Kirim"
+        Me.btnencrypt.Text = "Encrypt File"
         Me.btnencrypt.UseVisualStyleBackColor = True
         '
         'txtnama
@@ -150,7 +155,7 @@ Partial Class frmencrypt
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(48, 213)
+        Me.Label4.Location = New System.Drawing.Point(48, 210)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(33, 17)
         Me.Label4.TabIndex = 15
@@ -164,12 +169,40 @@ Partial Class frmencrypt
         Me.ListView1.TabIndex = 17
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
+        'btnkirim
+        '
+        Me.btnkirim.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.btnkirim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnkirim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.btnkirim.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnkirim.Location = New System.Drawing.Point(57, 152)
+        Me.btnkirim.Name = "btnkirim"
+        Me.btnkirim.Size = New System.Drawing.Size(295, 33)
+        Me.btnkirim.TabIndex = 18
+        Me.btnkirim.Text = "Kirim"
+        Me.btnkirim.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 236)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(372, 190)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
+        'BackgroundWorker1
+        '
+        '
         'frmencrypt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(838, 530)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnkirim)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.txtcari)
         Me.Controls.Add(Me.Label4)
@@ -189,6 +222,7 @@ Partial Class frmencrypt
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -207,4 +241,7 @@ Partial Class frmencrypt
     Friend WithEvents txtcari As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents btnkirim As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

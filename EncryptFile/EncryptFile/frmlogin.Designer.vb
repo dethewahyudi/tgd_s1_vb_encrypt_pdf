@@ -24,13 +24,13 @@ Partial Class frmlogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmlogin))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnlogin = New System.Windows.Forms.Button()
+        Me.btnkeluar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,30 +44,13 @@ Partial Class frmlogin
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(241, 175)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 33)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "KELUAR"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(137, 175)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 33)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "LOGIN"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'TextBox2
         '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(137, 142)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(188, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(188, 23)
         Me.TextBox2.TabIndex = 12
         '
         'Label3
@@ -81,9 +64,10 @@ Partial Class frmlogin
         '
         'TextBox1
         '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(137, 90)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(188, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(188, 23)
         Me.TextBox1.TabIndex = 10
         '
         'Label2
@@ -104,15 +88,41 @@ Partial Class frmlogin
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "LOGIN HERE"
         '
+        'btnlogin
+        '
+        Me.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnlogin.Location = New System.Drawing.Point(136, 175)
+        Me.btnlogin.Name = "btnlogin"
+        Me.btnlogin.Size = New System.Drawing.Size(87, 33)
+        Me.btnlogin.TabIndex = 16
+        Me.btnlogin.Text = "Login"
+        Me.btnlogin.UseVisualStyleBackColor = True
+        '
+        'btnkeluar
+        '
+        Me.btnkeluar.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.btnkeluar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnkeluar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.btnkeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnkeluar.Location = New System.Drawing.Point(238, 175)
+        Me.btnkeluar.Name = "btnkeluar"
+        Me.btnkeluar.Size = New System.Drawing.Size(87, 33)
+        Me.btnkeluar.TabIndex = 17
+        Me.btnkeluar.Text = "Keluar"
+        Me.btnkeluar.UseVisualStyleBackColor = True
+        '
         'frmlogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(347, 235)
+        Me.Controls.Add(Me.btnkeluar)
+        Me.Controls.Add(Me.btnlogin)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox1)
@@ -127,11 +137,11 @@ Partial Class frmlogin
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btnlogin As System.Windows.Forms.Button
+    Friend WithEvents btnkeluar As System.Windows.Forms.Button
 End Class

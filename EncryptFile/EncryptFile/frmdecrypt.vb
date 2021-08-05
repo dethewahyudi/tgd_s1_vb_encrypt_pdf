@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Security.Cryptography
 Imports System.Net.Mail
+Imports System.Data.OleDb
 
 Public Class frmdecrypt
     Dim strFileToEncrypt As String = ""
@@ -74,13 +75,19 @@ Public Class frmdecrypt
         txtFileToDecrypt.ReadOnly = True
         txtFileToDecrypt.Text = "Click Browse to load file."
 
-        'ListView1.View = View.Details
-        'ListView1.GridLines = True
-        'ListView1.Columns.Add("No").Width = 30
-        'ListView1.Columns.Add("Penerima").Width = 80
-        'ListView1.Columns.Add("Email").Width = 200
-        'ListView1.Columns.Add("Terkirim").Width = 80
-        'ListView1.FullRowSelect = True
+        ListView1.View = View.Details
+        ListView1.GridLines = True
+        ListView1.Columns.Add("No").Width = 30
+        ListView1.Columns.Add("No.Surat").Width = 80
+        ListView1.Columns.Add("Keterangan").Width = 200
+        ListView1.Columns.Add("TglSurat").Width = 80
+        ListView1.Columns.Add("Lampiran").Width = 150
+        ListView1.FullRowSelect = True
+
+        txttglsurat.Format = DateTimePickerFormat.Custom
+        txttglsurat.CustomFormat = "yyyy-MM-dd"
+
+        tampil()
     End Sub
 
     Private Sub EncryptOrDecryptFile(ByVal strInputFile As String, _
@@ -147,30 +154,6 @@ Public Class frmdecrypt
 
             Dim Wrap As String = Chr(13) + Chr(10)
             If Direction = CryptoAction.ActionEncrypt Then
-
-                'Dim myemail As String = "encrypt@tgd.my.id"
-                'Dim mypass As String = "CX[k!?RoIyzp"
-
-                'Dim mail As New MailMessage
-                'Dim server As New SmtpClient("mail.tgd.my.id")
-                'mail.From = New MailAddress("" & myemail & "")
-                'mail.[To].Add("" & txttujuan.Text & "")
-                'mail.Subject = Me.Text & " (" & namafile & ")"
-                'mail.Body = "Hai, " & txtnama.Text & vbCrLf _
-                '                & "  Berikut " & Me.Text.ToLower & " (" & namafile & ")"
-
-                'Dim attac As System.Net.Mail.Attachment
-                'attac = New System.Net.Mail.Attachment(txtDestinationEncrypt)
-                'mail.Attachments.Add(attac)
-
-                'server.Port = 26
-                'server.Credentials = New System.Net.NetworkCredential("" & myemail & "", "" & mypass & "")
-                'server.EnableSsl = True
-                'server.Send(mail)
-                'server.Dispose()
-
-                'txttujuan.Text = ""
-                'txtnama.Text = ""
                 MsgBox("Berhasil di Encrypt dan terkirim", MsgBoxStyle.Information, "Success")
                 'txtFileToEncrypt.Text = "Click Browse to load file."
             Else
@@ -206,34 +189,51 @@ Public Class frmdecrypt
     End Sub
 
     Private Sub fileopen2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fileopen2.Click
+
+        OpenFileDialog.Dispose()
         OpenFileDialog.FileName = ""
         OpenFileDialog.Title = "Choose a file to decrypt"
         OpenFileDialog.InitialDirectory = Application.StartupPath
         OpenFileDialog.Filter = "Encrypted Files (*.encrypt) | *.encrypt"
         txtDestinationDecrypt = ""
         namafile = ""
-        WebBrowser2.Navigate("about:blank")
+        WebBrowser2.Navigate("about:blank")        
+        txtnosurat.Text = ""
+        txtketerangan.Text = ""
 
-        If OpenFileDialog.ShowDialog = DialogResult.OK Then
-            strFileToDecrypt = OpenFileDialog.FileName
-            txtFileToDecrypt.Text = strFileToDecrypt
-            Dim iPosition As Integer = 0
-            Dim i As Integer = 0
+        Try
+            If OpenFileDialog.ShowDialog = DialogResult.OK Then
+                For Each Dir As String In Directory.GetFiles(Application.StartupPath & "\temp")
+                    Dim fileDelete As New FileInfo(Dir)
+                    fileDelete.Delete()
+                Next
 
-            While strFileToDecrypt.IndexOf("\"c, i) <> -1
-                iPosition = strFileToDecrypt.IndexOf("\"c, i)
-                i = iPosition + 1
-            End While
+                strFileToDecrypt = OpenFileDialog.FileName
+                txtFileToDecrypt.Text = strFileToDecrypt
+                Dim iPosition As Integer = 0
+                Dim i As Integer = 0
 
-            strOutputDecrypt = strFileToDecrypt.Substring(0, strFileToDecrypt.Length - 8)
-            Dim S As String = strFileToDecrypt.Substring(0, iPosition + 1)
-            S = Application.StartupPath & "\" & decrypt
-            strOutputDecrypt = strOutputDecrypt.Substring((iPosition + 1))
-            namafile = strOutputDecrypt.Replace("_"c, "."c)
-            txtDestinationDecrypt = S & "\" & strOutputDecrypt.Replace("_"c, "."c)
-            btndecrypt.Enabled = True
+                While strFileToDecrypt.IndexOf("\"c, i) <> -1
+                    iPosition = strFileToDecrypt.IndexOf("\"c, i)
+                    i = iPosition + 1
+                End While
 
-        End If
+                'strOutputDecrypt = strFileToDecrypt.Substring(0, strFileToDecrypt.Length - 8)
+                'Dim S As String = strFileToDecrypt.Substring(0, iPosition + 1)
+                Dim S As String
+                S = Application.StartupPath & "\" & decrypt
+                'strOutputDecrypt = strOutputDecrypt.Substring((iPosition + 1))
+                'namafile = strOutputDecrypt.Replace("_"c, "."c)
+                namafile = System.DateTime.Now.ToString("yyyyMMddHHmmss") & ".pdf"
+                'txtDestinationDecrypt = S & "\" & strOutputDecrypt.Replace("_"c, "."c)
+                txtDestinationDecrypt = S & "\" & namafile
+                btndecrypt.Enabled = True
+                OpenFileDialog.Dispose()
+            End If
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub btndecrypt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btndecrypt.Click
@@ -248,5 +248,133 @@ Public Class frmdecrypt
         bytIV = CreateIV(txtPassEncrypt)
         EncryptOrDecryptFile(strFileToDecrypt, txtDestinationDecrypt, _
                              bytKey, bytIV, CryptoAction.ActionDecrypt)
+    End Sub
+
+    Private Sub btnsimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsimpan.Click
+        Try          
+            If (txtnosurat.Text = "") Then
+                MsgBox("Nomor surat belum terisi !", MsgBoxStyle.Critical, "Gagal simpan")
+                Exit Sub
+            End If
+
+            If (txtketerangan.Text = "") Then
+                MsgBox("Keterangan belum terisi", MsgBoxStyle.Critical, "Gagal simpan")
+                Exit Sub
+            End If
+
+            koneksi()
+            cmd = New OleDbCommand("insert into tblterima values ('" & txtnosurat.Text & "','" & txtketerangan.Text & "','" & txttglsurat.Text & "','" & namafile & "')", con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            tampil()
+
+            txtnosurat.Text = ""
+            txtketerangan.Text = ""
+            MsgBox("Berhasil tersimpan", MsgBoxStyle.Information, "Success")
+            txtFileToDecrypt.Text = "Click Browse to load file."
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub tampil()
+        Try
+            koneksi()
+            If (txtcari.Text = "") Then
+                cmd = New OleDbCommand("select * from tblterima", con)
+            Else
+                cmd = New OleDbCommand("select * from tblterima where nosurat like '%" & txtcari.Text & "%' or keterangan like '%" & txtcari.Text & "%'", con)
+            End If
+
+            rd = cmd.ExecuteReader
+            Dim x = 0
+            ListView1.Items.Clear()
+            While rd.Read
+                ListView1.Items.Add(x + 1)
+                For i As Integer = 0 To 3 Step 1
+                    ListView1.Items(x).SubItems.Add(rd(i).ToString)
+                Next
+                x += 1
+            End While
+
+            rd.Close()
+            con.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+ 
+    Private Sub ListView1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListView1.Click
+        WebBrowser2.Navigate("about:blank")
+
+        txtnosurat.Text = ListView1.SelectedItems.Item(0).SubItems(1).Text
+        txtketerangan.Text = ListView1.SelectedItems.Item(0).SubItems(2).Text
+        txttglsurat.Text = ListView1.SelectedItems.Item(0).SubItems(3).Text
+        namafile = ListView1.SelectedItems.Item(0).SubItems(4).Text
+        WebBrowser2.Navigate(Application.StartupPath & "\" & decrypt & "\" & namafile & "#toolbar=0&navpanes=0")
+    End Sub
+
+   
+    Private Sub btnubah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnubah.Click
+        Try
+            If (txtnosurat.Text = "") Then
+                MsgBox("Nomor surat belum terisi !", MsgBoxStyle.Critical, "Gagal update")
+                Exit Sub
+            End If
+
+            If (txtketerangan.Text = "") Then
+                MsgBox("Keterangan belum terisi", MsgBoxStyle.Critical, "Gagal update")
+                Exit Sub
+            End If
+
+            koneksi()
+            cmd = New OleDbCommand("update tblterima set nosurat='" & txtnosurat.Text & "',keterangan='" & txtketerangan.Text & "',tglsurat='" & txttglsurat.Text & "' where lampiran='" & namafile & "'", con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            tampil()
+
+            txtnosurat.Text = ""
+            txtketerangan.Text = ""
+            MsgBox("Berhasil di update", MsgBoxStyle.Information, "Success")
+            txtFileToDecrypt.Text = "Click Browse to load file."
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnhapus_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnhapus.Click
+        Try
+            If (txtnosurat.Text = "") Then
+                MsgBox("Nomor surat belum terisi !", MsgBoxStyle.Critical, "Gagal hapus")
+                Exit Sub
+            End If
+
+            If (txtketerangan.Text = "") Then
+                MsgBox("Keterangan belum terisi", MsgBoxStyle.Critical, "Gagal hapus")
+                Exit Sub
+            End If
+
+            koneksi()
+            cmd = New OleDbCommand("delete from tblterima where lampiran='" & namafile & "'", con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            tampil()
+
+            txtnosurat.Text = ""
+            txtketerangan.Text = ""
+            MsgBox("Berhasil di hapus", MsgBoxStyle.Information, "Success")
+            txtFileToDecrypt.Text = "Click Browse to load file."
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtcari_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtcari.TextChanged
+        tampil()
     End Sub
 End Class
